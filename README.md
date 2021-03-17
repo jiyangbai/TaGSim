@@ -10,9 +10,9 @@ A implementation of "TaGSim: Type-aware Graph Similarity Learning and Computatio
 > SimGNN: A Neural Network Approach to Fast Graph Similarity Computation.
 > Yunsheng Bai, Hao Ding, Song Bian, Ting Chen, Yizhou Sun, Wei Wang.
 > WSDM, 2019.
-> [[Paper]](http://web.cs.ucla.edu/~yzsun/papers/2019_WSDM_SimGNN.pdf) -->
-
-<!-- A reference Tensorflow implementation is accessible [[here]](https://github.com/yunshengb/SimGNN) and another implementation is [[here]](https://github.com/NightlyJourney/SimGNN). -->
+> [[Paper]](http://web.cs.ucla.edu/~yzsun/papers/2019_WSDM_SimGNN.pdf)
+ -->
+A reference Tensorflow implementation is accessible [[here]](https://github.com/yunshengb/SimGNN) and another implementation is [[here]](https://github.com/NightlyJourney/SimGNN).
 
 <!-- ### Requirements
 The codebase is implemented in Python 3.5.2. package versions used for development are just below.
