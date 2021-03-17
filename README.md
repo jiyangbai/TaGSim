@@ -5,12 +5,12 @@ A implementation of "TaGSim: Type-aware Graph Similarity Learning and Computatio
 
 	
 
-This repository provides a PyTorch implementation of SimGNN as described in the paper:
+<!-- This repository provides a PyTorch implementation of SimGNN as described in the paper:
 
 > SimGNN: A Neural Network Approach to Fast Graph Similarity Computation.
 > Yunsheng Bai, Hao Ding, Song Bian, Ting Chen, Yizhou Sun, Wei Wang.
 > WSDM, 2019.
-> [[Paper]](http://web.cs.ucla.edu/~yzsun/papers/2019_WSDM_SimGNN.pdf)
+> [[Paper]](http://web.cs.ucla.edu/~yzsun/papers/2019_WSDM_SimGNN.pdf) -->
 
 
 
@@ -36,7 +36,7 @@ scikit-learn      0.20.0
 ``` -->
 ### Datasets
 <p align="justify">
-The datasets can be accessed in [[here]](https://drive.google.com/drive/folders/1GdhPHr6GZDgBK62XoFeJ_qMC3KLxzHrB?usp=sharing). Please make sure the downloaded files places in the /dataset/AIDS700nef file.</p>
+The datasets can be accessed in https://drive.google.com/drive/folders/1GdhPHr6GZDgBK62XoFeJ_qMC3KLxzHrB?usp=sharing. Please make sure the downloaded files places in the /dataset/AIDS700nef file.</p>
 
 <!-- Every JSON file has the following key-value structure:
 
