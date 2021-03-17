@@ -1,6 +1,5 @@
 TaGSim
-============================================
- [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/simgnn-a-neural-network-approach-to-fast/graph-similarity-on-imdb)](https://paperswithcode.com/sota/graph-similarity-on-imdb?p=simgnn-a-neural-network-approach-to-fast) ![License](https://img.shields.io/github/license/benedekrozemberczki/SimGNN.svg?color=blue&style=plastic) [![codebeat badge](https://codebeat.co/badges/3f5b0686-92d0-4afb-9c7a-cd36bb5bd80f)](https://codebeat.co/projects/github-com-benedekrozemberczki-simgnn-master)
+
  
 A implementation of "TaGSim: Type-aware Graph Similarity Learning and Computation"
 
@@ -13,7 +12,7 @@ A implementation of "TaGSim: Type-aware Graph Similarity Learning and Computatio
 > WSDM, 2019.
 > [[Paper]](http://web.cs.ucla.edu/~yzsun/papers/2019_WSDM_SimGNN.pdf) -->
 
-A reference Tensorflow implementation is accessible [[here]](https://github.com/yunshengb/SimGNN) and another implementation is [[here]](https://github.com/NightlyJourney/SimGNN).
+<!-- A reference Tensorflow implementation is accessible [[here]](https://github.com/yunshengb/SimGNN) and another implementation is [[here]](https://github.com/NightlyJourney/SimGNN). -->
 
 <!-- ### Requirements
 The codebase is implemented in Python 3.5.2. package versions used for development are just below.
