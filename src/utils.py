@@ -1,4 +1,3 @@
-"""Data processing utilities."""
 import json
 import math
 import random
@@ -78,7 +77,7 @@ def sorted_nicely(l):
 
 def load_gexf_file(dataset_name, train_or_test='train', node_featue_name='type'):
     graphs = []
-    dir = '/home/jiyang/SimGNN_pytorch/dataset/' + dataset_name + '/' + train_or_test
+    dir = './dataset/' + dataset_name + '/' + train_or_test
 
     for file in sorted_nicely(glob(dir + '/*.gexf')):
         gid = int(basename(file).split('.')[0])
@@ -88,7 +87,7 @@ def load_gexf_file(dataset_name, train_or_test='train', node_featue_name='type')
         if not nx.is_connected(g):
             raise RuntimeError('{} not connected'.format(gid))
 
-    for file in sorted_nicely(glob('/home/jiyang/SimGNN_pytorch/dataset/' + dataset_name + '/' + 'test' + '/*.gexf')):
+    for file in sorted_nicely(glob('./dataset/' + dataset_name + '/' + 'test' + '/*.gexf')):
         gid = int(basename(file).split('.')[0])
         g = nx.read_gexf(file)
         g.graph['gid'] = gid
@@ -120,75 +119,6 @@ def load_generated_graphs(dataset_name, file_name='generated_graph_500'):
     g.close()
     return generated_graphs
 
-# def load_sdz_dataset(dataset_name='AID2DA99.sdz'):
-#     dir = '/home/jiyang/SimGNN_pytorch/dataset/' + dataset_name
-
-#     count, graph_list, global_node_label, global_edge_label = 0, [], [], []
-#     with open(dir, 'r', encoding='UTF-8') as file:
-#         line = file.readline()
-
-#         while(line is not None and line != ''):
-#             # line_list = line.split(' ')    
-#             if(line == '$$$$\n'):
-#                 line = file.readline()
-#                 line = file.readline()
-#                 line = file.readline()
-#                 line = file.readline()
-#                 vertexSize, edgeSize = int(line[0:3]), int(line[3:6])
-#                 print('vesize', vertexSize, edgeSize)
-#                 G = nx.Graph()
-#                 for i in range(vertexSize):
-#                     line = file.readline()
-#                     line_list = line.split(' ')
-#                     while('' in line_list):
-#                         line_list.remove('')
-#                     G.add_node(str(i), label=str(i), type=line_list[3])
-#                     if(line_list[3] not in global_node_label):
-#                         global_node_label.append(line_list[3])
-
-#                 for j in range(edgeSize):
-#                     line = file.readline()
-#                     G.add_edge(str(int(line[0:3]) - 1), str(int(line[3:6]) - 1), type = line[8:9])
-#                     if(line[8:9] not in global_edge_label):
-#                         global_edge_label.append(line[8:9])
-#                 graph_list.append(G)
-#                 # print(nx.get_edge_attributes(G, 'type'))
-
-#             # if(count == 200):
-#             #     break
-#             line = file.readline()
-#             count+=1
-
-#     return graph_list
-
-
-# def load_PubChem(dataset_name='PubChem'):
-#     dir = '/home/jiyang/SimGNN_pytorch/dataset/' + dataset_name + '/PubChem.txt'
-
-#     graph_list, global_node_label, global_edge_label, count = [], [], [], 0
-#     with open(dir, 'r', encoding='UTF-8') as file:
-#         line = file.readline()
-#         G = nx.Graph()
-
-#         while(line is not None and line != ''):
-#             line_list = line.split(' ')
-#             if(line_list[0] == 't'):
-#                 count += 1
-#                 graph_list.append(G)
-#                 G = nx.Graph()
-#                 print(count)
-#             elif(line_list[0] == 'v'):
-#                 G.add_node(line_list[1], label=line_list[1], type=line_list[2])#[:-1])
-#                 if(line_list[2] not in global_node_label):
-#                     global_node_label.append(line_list[2])#[:-1])
-#             elif(line_list[0] == 'e'):
-#                 G.add_edge(line_list[1], line_list[2], type=line_list[3])#[:-1])
-#                 if(line_list[3] not in global_edge_label):
-#                     global_edge_label.append(line_list[3])#[:-1])
-
-#             line = file.readline()
-        
-#     return graph_list, global_node_label, global_edge_label
 
 
 # if __name__ == "__main__":
