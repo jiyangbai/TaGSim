@@ -1,4 +1,3 @@
-"""SimGNN runner."""
 import argparse
 import pickle
 from tagsim import TaGSimTrainer
