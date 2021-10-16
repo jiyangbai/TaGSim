@@ -116,7 +116,7 @@ class TaGSimTrainer(object):
 
         print("\nEnumerating unique labels.\n")
 
-        self.training_pairs = load_generated_graphs(self.args.dataset, file_name='generated_graph_*1120sebi')
+        self.training_pairs = load_generated_graphs(self.args.dataset, file_name='generated_graph_pairs')
         self.training_graphs = load_graphs(self.args.dataset, train_or_test='train')
         self.testing_graphs = load_graphs(self.args.dataset, train_or_test='test')
 
