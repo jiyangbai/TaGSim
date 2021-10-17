@@ -36,7 +36,7 @@ scikit-learn      0.20.0
 ``` -->
 ### Datasets
 <p align="justify">
-The datasets can be accessed in https://drive.google.com/drive/folders/1iBVBcjVPFbqOPZFvXWJAnXQ3w_IRM8-7. Please make sure the downloaded files places in the /dataset/AIDS700 file.</p>
+The datasets can be accessed in https://drive.google.com/drive/folders/1iBVBcjVPFbqOPZFvXWJAnXQ3w_IRM8-7. Please make sure the downloaded files places in the ./dataset/AIDS700 file.</p>
 
 <!-- Every JSON file has the following key-value structure:
 
