@@ -44,7 +44,7 @@ class TaGSim(torch.nn.Module):
         self.scoring_layer_ie = torch.nn.Linear(4, 1)
 
 
-    def convolutional_pass(self, edge_index, features):
+    def gal_pass(self, edge_index, features):
 
         hidden1 = self.gal1(features, edge_index)
         hidden2 = self.gal2(hidden1, edge_index)
@@ -57,8 +57,8 @@ class TaGSim(torch.nn.Module):
         adj_2 = torch.FloatTensor(np.array(data["edge_index_2"].todense()))
         features_1, features_2 = data["features_1"], data["features_2"]
         
-        graph1_hidden1, graph1_hidden2 = self.convolutional_pass(adj_1, features_1)#
-        graph2_hidden1, graph2_hidden2 = self.convolutional_pass(adj_2, features_2)#
+        graph1_hidden1, graph1_hidden2 = self.gal_pass(adj_1, features_1)#
+        graph2_hidden1, graph2_hidden2 = self.gal_pass(adj_2, features_2)#
 
 
         graph1_01concat = torch.cat([features_1, graph1_hidden1], dim=1)
