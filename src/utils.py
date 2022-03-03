@@ -14,10 +14,7 @@ from sklearn.preprocessing import OneHotEncoder
 from texttable import Texttable
 
 def tab_printer(args):
-    """
-    Function to print the logs in a nice tabular format.
-    :param args: Parameters used for the model.
-    """
+
     args = vars(args)
     keys = sorted(args.keys())
     t = Texttable()
@@ -26,30 +23,19 @@ def tab_printer(args):
     print(t.draw())
 
 def process_pair(path):
-    """
-    Reading a json file with a pair of graphs.
-    :param path: Path to a JSON file.
-    :return data: Dictionary with data.
-    """
+
     data = json.load(open(path))
     return data
 
 def calculate_loss(prediction, target):
-    """
-    Calculating the squared loss on the normalized GED.
-    :param prediction: Predicted log value of GED.
-    :param target: Factual log transofmed GED.
-    :return score: Squared error.
-    """
+
     prediction = -math.log(prediction)
     target = -math.log(target)
     score = (prediction-target)**2
     return score
 
 def calculate_normalized_ged(data):
-    """
-    Calculating the normalized GED for a pair of graphs.
-    """
+
     graph1, graph2 = data['graph_pair'][0], data['graph_pair'][1]
     norm_ged = data["ged"]/(0.5*(len(data["labels_1"])+len(data["labels_2"])))
     norm_ged = (data['ged']['nc'] + data['ged']['in'] + data['ged']['ie']) / (0.5 * (graph1.number_of_nodes() + graph2.number_of_nodes()))
