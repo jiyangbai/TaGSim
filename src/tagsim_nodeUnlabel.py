@@ -26,8 +26,8 @@ class TaGSim(torch.nn.Module):
         self.feature_count = self.args.tensor_neurons
 
 
-        self.tensor_network_in = TensorNetworkModule(self.args, 7)# 7 for linux; 11 for IMDB
-        self.tensor_network_ie = TensorNetworkModule(self.args, 21)# 21 for linux; 60 for IMDB
+        self.tensor_network_in = TensorNetworkModule(self.args, 7)# 7 for linux; 11 for IMDB # the valus here can be set by the users
+        self.tensor_network_ie = TensorNetworkModule(self.args, 21)# 21 for linux; 60 for IMDB # the valus here can be set by the users
 
         self.fully_connected_first_in = torch.nn.Linear(self.feature_count, self.args.bottle_neck_neurons)
         self.fully_connected_second_in = torch.nn.Linear(self.args.bottle_neck_neurons, 8)
@@ -58,23 +58,23 @@ class TaGSim(torch.nn.Module):
     
         Graph1_hidden1, Graph1_hidden2, Graph2_hidden1, Graph2_hidden2 = [], [], [], []
         for i in range(graph1_hidden1.size()[0]):
-            if(graph1_hidden1[i][0] >= 6):# 10 for imdb; 6 for linux
+            if(graph1_hidden1[i][0] >= 6):# 10 for imdb; 6 for linux # the valus here can be set by the users
                 Graph1_hidden1.append([0.0]*5 + [1.0])
             else:
                 Graph1_hidden1.append([1.0 if graph1_hidden1[i][0] == j else 0.0 for j in range(6)])
 
-            if(graph1_hidden2[i][0] >= 15):# 50 for imdb; 15 for linux
+            if(graph1_hidden2[i][0] >= 15):# 50 for imdb; 15 for linux # the valus here can be set by the users
                 Graph1_hidden2.append([0.0]*14 + [1.0])
             else:
                 Graph1_hidden2.append([1.0 if graph1_hidden2[i][0] == j else 0.0 for j in range(15)])
 
         for i in range(graph2_hidden1.size()[0]):
-            if(graph2_hidden1[i][0] >= 6):# 10 for imdb; 6 for linux
+            if(graph2_hidden1[i][0] >= 6):# 10 for imdb; 6 for linux # the valus here can be set by the users
                 Graph2_hidden1.append([0.0]*5 + [1.0])
             else:
                 Graph2_hidden1.append([1.0 if graph2_hidden1[i][0] == j else 0.0 for j in range(6)])
 
-            if(graph2_hidden2[i][0] >= 15):# 50 for imdb; 15 for linux
+            if(graph2_hidden2[i][0] >= 15):# 50 for imdb; 15 for linux # the valus here can be set by the users
                 Graph2_hidden2.append([0.0]*14 + [1.0])
             else:
                 Graph2_hidden2.append([1.0 if graph2_hidden2[i][0] == j else 0.0 for j in range(15)])
