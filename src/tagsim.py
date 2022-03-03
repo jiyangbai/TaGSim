@@ -18,15 +18,12 @@ class TaGSim(torch.nn.Module):
         self.number_labels = number_of_labels
         self.setup_layers()
 
-    def calculate_bottleneck_features(self):
-
-        self.feature_count = self.args.tensor_neurons
 
     def setup_layers(self):
 
         self.gal1 = GraphAggregationLayer()
         self.gal2 = GraphAggregationLayer()
-        self.calculate_bottleneck_features()
+        self.feature_count = self.args.tensor_neurons
 
         self.tensor_network_nc = TensorNetworkModule(self.args, 2*self.number_labels)
         self.tensor_network_in = TensorNetworkModule(self.args, 2*self.number_labels)
