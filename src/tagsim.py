@@ -7,7 +7,7 @@ import numpy as np
 import scipy.sparse as sp
 import networkx as nx
 from layers import TensorNetworkModule, GraphAggregationLayer
-from utils import calculate_loss, calculate_normalized_ged, load_graphs, load_generated_graphs, process_pair
+from utils import load_graphs, load_generated_graphs, process_pair
 
 class TaGSim(torch.nn.Module):
 
