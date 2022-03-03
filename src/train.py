@@ -14,7 +14,7 @@ def main():
     parser.add_argument("--batch_size", type=int, default=128, help="Number of graph pairs per batch. Default is 128.")
     parser.add_argument("--dropout", type=float, default=0.0, help="Dropout probability. Default is 0.0.")
     parser.add_argument("--lr", type=float, default=0.001, help="Learning rate. Default is 0.001.")
-    parser.add_argument("--weight-decay", type=float, default=0.0, help="Adam weight decay. Default is 5*10^-4.")
+    parser.add_argument("--weight-decay", type=float, default=0.0, help="Adam weight decay. Default is 0.")
     args = parser.parse_args()
 
 
