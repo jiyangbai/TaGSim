@@ -6,7 +6,6 @@ import pickle
 import numpy as np
 import scipy.sparse as sp
 import networkx as nx
-from tqdm import tqdm, trange
 from layers import TensorNetworkModule, GraphAggregationLayer
 from utils import calculate_loss, calculate_normalized_ged, load_graphs, load_generated_graphs, process_pair
 
