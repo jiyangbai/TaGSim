@@ -121,7 +121,7 @@ class TaGSimTrainer(object):
 
     def initial_label_enumeration(self):
         
-        self.training_pairs = load_generated_graphs(self.args.dataset, file_name='generated_graph_*800symme_edgedel_bigged_ine')
+        self.training_pairs = load_generated_graphs(self.args.dataset, file_name='generated_graph_pairs')
         self.training_graphs = load_graphs(self.args.dataset, train_or_test='train')
         self.testing_graphs = load_graphs(self.args.dataset, train_or_test='test')
 
