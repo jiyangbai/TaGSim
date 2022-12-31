@@ -1,7 +1,7 @@
 # TaGSim
 
  
-An implementation of the "TaGSim: Type-aware Graph Similarity Learning and Computation.
+An implementation of the "TaGSim: Type-aware Graph Similarity Learning and Computation".
 
 	
 
