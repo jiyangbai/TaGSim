@@ -128,7 +128,6 @@ class TaGSimTrainer(object):
 
         new_data = dict()
         graph1, graph2 = data['graph_pair'][0], data['graph_pair'][1]
-        nodes1, nodes2 = list(graph1.nodes()), list(graph2.nodes())
 
         features_1, features_2 = [], []
 
